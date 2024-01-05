@@ -1,0 +1,37 @@
+.brand {
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  h5 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  &-colors {
+    display: flex;
+    span {
+      background: var(--bgColor);
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--textColor);
+      text-indent: -999999px;
+      width: 70px;
+    }
+  }
+
+  &.selected {
+    border-color: red;
+    .brand-colors {
+      span {
+        cursor: pointer;
+        flex: 1;
+        text-indent: 0;
+      }
+    }
+  }
+}

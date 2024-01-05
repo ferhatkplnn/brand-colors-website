@@ -1,0 +1,51 @@
+.download {
+  padding-right: 25px;
+  display: flex;
+  align-items: center;
+  .actions {
+    display: flex;
+    margin-right: 15px;
+    a,
+    button {
+      height: 30px;
+      width: 30px;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      svg {
+        height: 15px;
+        width: 15px;
+      }
+    }
+  }
+  .selected {
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    button {
+      background-color: transparent;
+      margin-right: 5px;
+      svg {
+        display: block;
+        margin-right: 6px;
+        path {
+          stroke: #999;
+        }
+      }
+    }
+  }
+
+  select {
+    height: 30px;
+    padding: 0 15px;
+    background-color: #eee;
+    appearance: none;
+    cursor: pointer;
+  }
+}
