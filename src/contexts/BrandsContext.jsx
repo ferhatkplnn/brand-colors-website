@@ -14,7 +14,9 @@ export const BrandsProvider = ({ children }) => {
 
   useEffect(() => {
     setBrands(
-      brandsArray.filter((brand) => brand.title.toLowerCase().includes(search))
+      brandsArray.filter((brand) =>
+        brand.title.toLowerCase().includes(search.toLowerCase())
+      )
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
