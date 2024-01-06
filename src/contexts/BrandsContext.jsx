@@ -8,8 +8,6 @@ export const BrandsProvider = ({ children }) => {
   const brandsArray = useMemo(() => Object.values(BrandsData), []);
 
   const [brands, setBrands] = useState(brandsArray);
-  const [copied, setCopied] = useState(false);
-  const [selectedBrands, setSelectedBrands] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -22,11 +20,7 @@ export const BrandsProvider = ({ children }) => {
   }, [search]);
 
   const data = {
-    selectedBrands,
-    setSelectedBrands,
-    copied,
     brands,
-    setCopied,
     search,
     setSearch,
   };
@@ -37,5 +31,5 @@ export const BrandsProvider = ({ children }) => {
 };
 
 BrandsProvider.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 };
